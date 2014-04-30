@@ -1,0 +1,64 @@
+Quiz.QuestionsController = Ember.ObjectController.extend({
+
+	needs: ['interval'],
+	actions:
+	{
+	
+		moveNext:function()
+		{
+			model = this.get('model');
+			var self=this;
+			answer = $('input:radio[name=answer]:checked').val();
+			if(answer != undefined)
+			{
+				model.set('uservalue',answer);
+				model.save();
+			var id =model.id;
+			this.store.find('questions').then(function(model){
+				var length = model.get("length");
+				var newRoute =parseInt(id)+1;
+				if(id<length)
+				{
+					self.transitionToRoute('/questions/'+newRoute);
+				}
+				else
+				{
+					self.transitionToRoute('/result');	
+				}
+			});
+			}
+		},
+		pass:function()
+		{
+			var id = this.get('model.id');
+			var self=this;
+			this.store.find('questions').then(function(model){
+				var length = model.get("length");
+				var newRoute =parseInt(id)+1;
+				if(id<length)
+				{
+					self.transitionToRoute('/questions/'+newRoute);
+				}
+				else
+				{
+					self.transitionToRoute('/result');
+				}
+			});
+		},
+		quit:function()
+		{
+			document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+			this.transitionTo('index');
+		}
+	},
+	points:0,
+	completed:function()
+	{
+		var id = this.get('model.id');
+		this.set('clock',ClockService.create());
+		return id;
+	}.property('id'),
+	
+	clock:	ClockService.create()
+	
+});

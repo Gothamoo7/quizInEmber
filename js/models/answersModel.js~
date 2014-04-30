@@ -1,0 +1,140 @@
+Quiz.Answers = DS.Model.extend({
+		options: DS.attr('string')
+});
+Quiz.Answers.FIXTURES = [
+{
+	id: 1,
+	options: 'Asafa Powell'
+	
+},
+{
+	id:2,
+	options: 'Usain Bolt'
+},
+{
+	id:3,
+	options: 'Tyson Gay'
+},
+{
+	id:4,
+	options: 'Shawn Crawford'
+}
+,
+ {
+	id: 5,
+	options: 'Fahien'
+},
+{
+	options: 'Magellan'
+},
+{
+	options:  'Vasco da Gama'
+},
+{
+	options: 'Columbus'
+ },
+ {
+   id: 3,
+   options: 'Rugby'
+},
+{
+   options: 'Badminton'
+},
+{
+   options:  'Polo'
+},
+{
+   options: 'Tennis'
+ },
+ {
+   id: 4,
+   options: 'Tanzania'
+},
+{
+   options: 'Syria'
+},
+{
+   options:  'Algeria'
+},
+{
+   options: 'Indonesia'
+ },
+ {
+   id: 5,
+   options: 'Neil Armstrong'
+},
+{
+   options: 'Edmund Hillary'
+},
+{
+   options:  'Tenzing Norgay'
+},
+{
+   options: 'Yuri Gagarin'
+ },
+ {
+   id: 6,
+   options: 'Papaya'
+},
+{
+   options: 'Pomegranate'
+},
+{
+   options:  'Litchi'
+},
+{
+   options: 'Apple'
+ },
+ {
+   id: 7,
+   options: 'Tortoise'
+},
+{
+   options: 'Snail'
+},
+{
+   options:  'Sloth'
+},
+{
+   options: 'Mule'
+ },
+ {
+   id: 8,
+   options: 'Christopher Lee'
+},
+{
+   options: 'Mel Gibson'
+},
+{
+   options:  'Christopher Reeve'
+},
+{
+   options: 'Tom Cruise'
+ },
+ {
+   id: 9,
+   options: 'Nile'
+},
+{
+   options: 'Brahamaputra'
+},
+{
+   options:  'Amazon'
+},
+{
+   options: 'Missisippi'
+ },
+ {
+   id: 10,
+   options: 'Ural'
+},
+{
+   options: 'Alps'
+},
+{
+   options:  'Himalayas'
+},
+{
+   options: 'Andes'
+ }
+ ];

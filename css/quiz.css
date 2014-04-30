@@ -1,0 +1,125 @@
+.heading
+{	
+	height: 190px;
+	width: 350px;
+	background: url('../images/heading.jpeg');
+	background-size: 100% 100%;
+	margin:0 auto;
+	
+}
+.main
+{
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+}
+.userBox
+{
+	margin: 0 auto;
+	width: 201px;
+	margin-top: 29px;
+}
+.userName
+{
+	margin: 0 auto;
+	width: 116px;
+	margin-top: 90px;
+}
+.userText
+{
+	outline: none;
+	border-radius: 10px;
+	font-size: larger;
+	width: 189px;
+	padding: 1px 10px;
+	font-family: cursive;
+}
+.startDiv
+{
+	margin: 0 auto;
+	width: 150px;
+	margin-top:100px;
+}
+.start
+{
+	border-radius: 10px;
+	width: 144px;
+	height: 28px;
+	font-weight:bold;
+	outline:none;
+	cursor:pointer;
+}
+.statusBar
+{
+	margin: 0 auto;
+	width: 50%;
+	//border: 1px solid black;
+	height: 28px;
+	margin-top: 107px;
+	padding-top: 12px;
+	background-color:grey;
+	color : white;
+}
+.questionsDiv
+{
+	margin: 0 auto;
+	margin-top : 40px;
+	width: 50%;
+	color : grey;
+	//border: 1px solid grey;
+	text-align: center;
+}
+.options
+{
+	width: 25%;
+	margin: 0 auto;
+	margin-top: 34px;
+}
+.statusContent
+{
+	//border: 1px solid grey;
+	margin-left: 17%;
+}
+.footer
+{
+	margin:0 auto;
+	margin-top : 30px;
+	width : 50%;
+}
+.hiddenbutton
+{
+	width : 100px;
+}
+.radio
+{
+	margin-right: 22px;
+	margin-top: 23px;
+}
+.results
+{
+	margin: 0 auto;
+	width: 111px;
+	font-size: 30px;
+	font-family: sans-serif;
+}
+.scoreboard
+{
+	border: 1px solid;
+	width: 326px;
+	margin: 0 auto;
+	margin-top: 41px;
+	text-align: center;
+	padding-top: 16px;
+	font-size: 28px;
+	font-weight: lighter;
+	box-shadow: 1px 1px 4px 2px darkolivegreen;
+}
+.helpBox
+{
+	position: absolute;
+	border: 1px solid;
+	width: 262px;
+	height: 442px;
+	right: 3px;
+	display:none;
+}

@@ -1,0 +1,3 @@
+Quiz.QuestionController = Ember.ArrayController.extend({
+
+});

@@ -1,0 +1,100 @@
+Quiz.Question = DS.Model.extend({
+  questionId:DS.attr('string'),
+  question: DS.attr('string'),
+  option1:DS.attr('string'),
+  option2:DS.attr('string'),
+  option3:DS.attr('string'),
+  option4:DS.attr('string')
+});
+Quiz.Question.FIXTURES = [
+ {
+   questionId: "1",
+   question: 'Who mong these is the fastest man on the Earth?',
+   option1: 'Asafa Powell',
+   option2: 'Usain Bolt',
+   option3: 'Tyson Gay',
+   option4: 'Shawn Crawford',
+   answer: 'Usain Bolt'
+ },
+ {
+ 	questionId: "2",
+   question: 'Who was the first foreign traveller to India?',
+   option1: 'Fahien',
+   option2: 'Magellan',
+   option3:  'Vasco da Gama',
+   option4: 'Columbus',
+   answer: 'Fahien'
+ },
+ {
+   questionId: 3,
+   question: 'With which game is \'Thomas Cup\' associated?',
+   option1: 'Rugby',
+   option2: 'Badminton',
+   option3:  'Polo',
+   option4: 'Tennis',
+   answer: 'Badminton'
+ },
+ {
+   questionId: 4,
+   question: 'The komodo dragons are found in which country?',
+   option1: 'Tanzania',
+   option2: 'Syria',
+   option3:  'Algeria',
+   option4: 'Indonesia',
+   answer: 'Indonesia'
+ },
+ {
+   questionId: 5,
+   question: 'Who was the first man in space??',
+   option1: 'Neil Armstrong',
+   option2: 'Edmund Hillary',
+   option3:  'Tenzing Norgay',
+   option4: 'Yuri Gagarin',
+   answer: 'Yuri Gagarin'
+ },
+ {
+   questionId: 6,
+   question: 'Which of these is not a multi-seeded fruit?',
+   option1: 'Papaya',
+   option2: 'Pomegranate',
+   option3:  'Litchi',
+   option4: 'Apple',
+   answer: 'Litchi'
+ },
+ {
+   questionId: 7,
+   question: 'Which is the slowest animal?',
+   option1: 'Tortoise',
+   option2: 'Snail',
+   option3:  'Sloth',
+   option4: 'Mule',
+   answer: 'Sloth'
+ },
+ {
+   questionId: 8,
+   question: 'Who acted as Superman in the motion picture?',
+   option1: 'Christopher Lee',
+   option2: 'Mel Gibson',
+   option3:  'Christopher Reeve',
+   option4: 'Tom Cruise',
+   answer: 'Christopher Lee'
+ },
+ {
+   questionId: 9,
+   question: 'Which is the broadest river in the world?',
+   option1: 'Nile',
+   option2: 'Brahamaputra',
+   option3:  'Amazon',
+   option4: 'Missisippi',
+   answer: 'Amazon'
+ },
+ {
+   questionId: 10,
+   question: 'The highest mountain range in Europe is..',
+   option1: 'Ural',
+   option2: 'Alps',
+   option3:  'Himalayas',
+   option4: 'Andes',
+   answer: 'Alps'
+ }
+ ];
