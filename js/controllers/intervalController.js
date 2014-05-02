@@ -28,7 +28,7 @@ Ember.Handlebars.registerBoundHelper('digital_clock', function(seconds) {
   var s = Math.floor(seconds % 60);
   if(seconds ==30)
   {
-	 	 Ember.Instrumentation.instrument("message.received");
+	 	 this.get('targetObject').send('pass');
   }
   var addZero = function (number) {
     return (number < 10) ? '0' + number : '' + number;

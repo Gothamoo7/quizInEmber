@@ -1,6 +1,5 @@
 Quiz.QuestionsController = Ember.ObjectController.extend({
 
-	needs: ['interval'],
 	actions:
 	{
 	
@@ -8,10 +7,10 @@ Quiz.QuestionsController = Ember.ObjectController.extend({
 		{
 			model = this.get('model');
 			var self=this;
-			answer = $('input:radio[name=answer]:checked').val();
-			if(answer != undefined)
+			var ans = this.get('answer');
+			if(ans != undefined)
 			{
-				model.set('uservalue',answer);
+				model.set('uservalue',ans);
 				model.save();
 			var id =model.id;
 			this.store.find('questions').then(function(model){
@@ -51,14 +50,46 @@ Quiz.QuestionsController = Ember.ObjectController.extend({
 			this.transitionTo('index');
 		}
 	},
-	points:0,
+	answer:null,
 	completed:function()
 	{
 		var id = this.get('model.id');
-		this.set('clock',ClockService.create());
 		return id;
-	}.property('id'),
-	
-	clock:	ClockService.create()
-	
+	}.property('id')
+});
+
+
+Quiz.Radio = Ember.View.extend(Ember.Validations.Mixin,{
+	tagName : "input", 
+	type : "radio", 
+	attributeBindings : [ "name", "type", "value" ],
+	click : function() 
+	{
+		this.checked()
+	},
+	validations: //ember validation 
+	{
+		answer: 
+		{
+			presence: true,
+		}
+	},
+	answer:null,
+	checked : function() 
+	{
+		var self = this;
+		this.validate().then(null, function()  //ember validation 
+		{
+			if(self.get('isValid')==true)
+			{
+				$('.start').attr('disabled', false);
+			}
+			else
+			{
+				$('.start').attr('disabled', true);
+			}
+		});
+		this.set('answer',this.get("value"));
+		this.set('controller.answer',this.get("value"));
+	} 
 });
