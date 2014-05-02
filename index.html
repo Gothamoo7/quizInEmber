@@ -5,6 +5,7 @@
     <script src="js/libs/handlebars-1.1.2.js"></script>
     <script src="js/libs/ember.js"></script>
     <script src="js/libs/ember-data.js"></script>
+    <script src="js/libs/ember-validations.js"></script>
     <link rel='stylesheet' href='css/quiz.css' />
  		<script src='js/quiz.js'>
  		</script>
@@ -14,23 +15,29 @@
  			<div class = 'main'>
 	 			<div class = 'statusBar'>
 		 				 	<span class ='statusContent'>Question {{completed}}/10</span>
-		 				 	<span class ='statusContent'>{{digital_clock clock.pulse}}</span>
+		 				 	{{question-timer}}
 		 				 	<span class ='statusContent'>Weight 4</span>
  				</div>
 	 			<div class = 'questionsDiv'>{{question}}
 				</div>
 				<div  class = 'options'>
+					<form>
 					{{#each item in options}}
-						{{input type="radio" class ='radio' name="answer" value=item.value}}{{item.value}}<br>
+						<label>
+						{{view Quiz.Radio  class ="radio" name="answer" value=item.value}}{{item.value}}</label><br>
 					{{/each}}
 				</div>
 				<div class='footer'>
 					<button class="start hiddenbutton" style='margin-right:120px;' {{action 'quit'}}><  Quit</button>
-					<button class="start" id='next'style='margin-right:120px;' {{action 'moveNext'}}>Next</button>
+					<input type='submit' class="start" id='next'style='margin-right:120px;' value='Next'{{action "moveNext"}} disabled='true'/>
 					<button class="start hiddenbutton" {{action 'pass'}}>Pass   ></button>
+					</form>
 				</div>
  			</div>
  		</script>
+ 			<script type="text/x-handlebars" data-template-name="components/question-timer">
+			{{digital_clock clock.pulse}}
+			</script>
  		<script  type="text/x-handlebars" data-template-name="result">
  			<div class = "main">
 		 		<div class="heading" >
@@ -77,5 +84,6 @@
 	<script src="js/controllers/intervalController.js"></script>
 	<script src="js/controllers/resultController.js"></script>
 	<script src="js/controllers/quizcontroller.js"></script>
+	<script src="js/components/clockComponent.js"></script>
  	</body>
 </html>
