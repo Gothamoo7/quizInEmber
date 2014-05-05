@@ -1,8 +1,0 @@
-Quiz.QuestionController = Ember.ObjectController.extend({
-
-	completed: function()
-	{
-			var model = this.get('model');
-	}
-	weight:
-});
