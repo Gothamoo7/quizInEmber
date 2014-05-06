@@ -1,4 +1,4 @@
-Quiz.Questions = DS.Model.extend({
+Quiz.Questions = DS.Model.extend(Ember.Validations.Mixin,{
 	question: DS.attr('string'),
 	expected: DS.attr('string'),
 	uservalue: DS.attr('string'),
