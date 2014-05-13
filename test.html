@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		    <link rel="stylesheet" href="css/mocha.css" />
+	</head>
+	<body>
+		<div id="mocha"></div>
+		<script src='js/quiz.js'>
+ 		</script>
+		<script src="js/libs/jquery-1.10.2.js"></script>
+		<script src="js/libs/handlebars-1.1.2.js"></script>
+		<script src="js/libs/ember.js"></script>
+		<script src="js/libs/ember-data.js"></script>
+		<script src="js/libs/ember-validations.js"></script>
+		<script src="js/libs/localstorage_adapter.js"></script>
+		<script src="js/application.js"></script>
+		<script src="js/router.js"></script>
+		<script src="js/models/questionsModel.js"></script>
+		<script src="js/models/optionModel.js"></script>
+		<script src="js/controllers/questionsController.js"></script>
+		<script src="js/controllers/appController.js"></script>
+		<script src="js/controllers/optionController.js"></script>
+		<script src="js/controllers/intervalController.js"></script>
+		<script src="js/controllers/resultController.js"></script>
+		<script src="js/controllers/quizcontroller.js"></script>
+		<script src="js/components/clockComponent.js"></script>
+		<script src="js/mocha.js"></script>
+		<script src="js/sinon.js"></script>
+		<script src="js/chai.js"></script>
+		<script src="js/expect.js"></script>
+		<script>mocha.setup('bdd')</script>
+		<script>expect = chai.expect</script>
+		<script src="js/test.js"></script>
+		<script>
+			 mocha.run();
+		</script>
+	</body>
+</html>
